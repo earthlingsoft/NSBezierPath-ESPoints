@@ -27,17 +27,18 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface NSBezierPath (ESPoints)  
+@interface NSBezierPath (ESPoints)
 
 - (void) drawPointsAndHandles;
 
-- (void) drawPointsInColor: (NSColor*) pointColor withHandlesInColor: (NSColor *) handleColor;
+- (void) drawPointsInColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor;
 
-- (void) drawPoint: (NSPoint) pt;
-- (void) drawPoint: (NSPoint) pt inColor: (NSColor*) pointColor;
-- (void) drawHandlePoint: (NSPoint) pt;
-- (void) drawHandlePoint: (NSPoint) pt inColor: (NSColor*) pointColor;
+- (void) drawPoint:(NSPoint)pt;
+- (void) drawPoint:(NSPoint)pt inColor:(NSColor *)pointColor;
+- (void) drawHandlePoint:(NSPoint)pt;
+- (void) drawHandlePoint:(NSPoint)pt inColor:(NSColor *)pointColor;
 
-- (NSPoint) drawPathElement:(int) n withPreviousPoint: (NSPoint) previous;
-- (NSPoint) drawPathElement:(int) n  withPreviousPoint: (NSPoint) previous inColor: (NSColor*) pointColor withHandlesInColor: (NSColor*) handleColor;
+- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous;
+- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor;
+
 @end

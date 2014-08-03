@@ -17,16 +17,17 @@
 @implementation NSBezierPath (ESPoints)
 
 #pragma mark MAIN CONVENIENCE METHODS
+
 - (void) drawPointsAndHandles {
 	[self drawPointsInColor:DEFAULTPOINTCOLOR withHandlesInColor:DEFAULTHANDLECOLOR];
 }
 
 
-- (void) drawPointsInColor: (NSColor*) pointColor withHandlesInColor: (NSColor *) handleColor {
+- (void) drawPointsInColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor {
 	NSPoint previousPoint = NSMakePoint(0.0, 0.0);
 	
 	for (NSInteger i=0; i < [self elementCount]; i++) {
-		previousPoint = [self drawPathElement:i withPreviousPoint: previousPoint inColor:pointColor withHandlesInColor: handleColor];
+		previousPoint = [self drawPathElement:i withPreviousPoint:previousPoint inColor:pointColor withHandlesInColor:handleColor];
 	}
 }
 
@@ -34,24 +35,24 @@
 
 #pragma mark DRAWING POINTS 
 
-- (void) drawPoint: (NSPoint) pt {
-	[self drawPoint:pt inColor: DEFAULTPOINTCOLOR];
+- (void) drawPoint:(NSPoint)pt {
+	[self drawPoint:pt inColor:DEFAULTPOINTCOLOR];
 }
 
 
-- (void) drawPoint: (NSPoint) pt inColor: (NSColor*) pointColor {
+- (void) drawPoint:(NSPoint)pt inColor:(NSColor *)pointColor {
 	NSBezierPath * bp = [NSBezierPath bezierPathWithRect:NSMakeRect(pt.x - POINTSIZE * 0.5, pt.y - POINTSIZE * 0.5, POINTSIZE, POINTSIZE)];
 	[pointColor set];
 	[bp fill];
 }
 
 
-- (void) drawHandlePoint: (NSPoint) pt {
-	[self drawHandlePoint: pt inColor:DEFAULTHANDLECOLOR];
+- (void) drawHandlePoint:(NSPoint)pt {
+	[self drawHandlePoint:pt inColor:DEFAULTHANDLECOLOR];
 }
 
 
-- (void) drawHandlePoint: (NSPoint) pt inColor: (NSColor*) pointColor {
+- (void) drawHandlePoint:(NSPoint)pt inColor:(NSColor *)pointColor {
 	NSBezierPath * bp = [NSBezierPath bezierPathWithRect:NSMakeRect(pt.x-HANDLESIZE * 0.5, pt.y - HANDLESIZE * 0.5, HANDLESIZE, HANDLESIZE)];
 	[pointColor set];
 	[bp fill];
@@ -61,15 +62,15 @@
 
 #pragma mark DRAWING PATH ELEMENTS
 
-- (NSPoint) drawPathElement:(int) n withPreviousPoint: (NSPoint) previous {
+- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous {
 	return [self drawPathElement:n withPreviousPoint:previous inColor:DEFAULTPOINTCOLOR withHandlesInColor:DEFAULTHANDLECOLOR];
 }
 
 
-- (NSPoint) drawPathElement:(int) n  withPreviousPoint: (NSPoint) previous inColor: (NSColor*) pointColor withHandlesInColor: (NSColor*) handleColor {
+- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor {
 	NSPoint previousPoint;
 	NSPoint points[3];
-	NSBezierPathElement element = [self elementAtIndex: n associatedPoints:points];
+	NSBezierPathElement element = [self elementAtIndex:n associatedPoints:points];
 	NSBezierPath * bp;
 	switch (element) {
 		case NSCurveToBezierPathElement:
@@ -82,8 +83,8 @@
 			[handleColor set];
 			[bp stroke];
 			
-			[self drawHandlePoint: points[0] inColor:handleColor];
-			[self drawHandlePoint: points[1] inColor:handleColor];
+			[self drawHandlePoint:points[0] inColor:handleColor];
+			[self drawHandlePoint:points[1] inColor:handleColor];
 			[self drawPoint:points[2] inColor:pointColor];
 			
 			previousPoint = points[2];
