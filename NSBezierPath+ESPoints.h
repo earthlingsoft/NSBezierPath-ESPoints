@@ -1,35 +1,27 @@
 /*
-	NSBezierPath+ESPoints.h
-
-	v1 (2008-07-27)
+ NSBezierPath+ESPoints.h
  
-	Created by  Sven on 24.05.08.
-	Copyright 2008 earthlingsoft. All rights reserved.
-
-	Available at
-		http://earthlingsoft.net/code/NSBezierPath+ESPoints/
-	More code at
-		http://earthlingsoft.net/code/
-
-	You may use this code in your own projects at your own risk.
-	Please notify us of problems you discover and be sure to give 
-	reasonable credit.
-
-	********************************************************************
-
-	Category on NSBezierPath for drawing anchor and handle control 
-	points with a single method call:
+ Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
+ Some rights reserved: http://opensource.org/licenses/mit
+ Available at: https://github.com/earthlingsoft/NSBezierPath-ESPoints
  
-		-drawPointsAndHandles	
+ v1 (2008-07-27)
+ 
+ ********************************************************************
+ 
+ Category on NSBezierPath for drawing anchor and handle control
+ points with a single method call:
+ 
+	-drawPointsAndHandles
 	
-	draws the control points of the path and associated handles in green 
-	and the anchor points in red, which is particularly useful when 
-	debugging Bézier paths.
-
-	Call it after stroking the path to get the full picture.
+ draws the control points of the path and associated handles in green
+ and the anchor points in red, which is particularly useful when
+ debugging Bézier paths.
  
-	The remaining methods allow finer control of the colour usage and are 
-	helper methods for doing the drawing. 
+ Call it after stroking the path to get the full picture.
+ 
+ The remaining methods allow finer control of the colour usage and are
+ helper methods for doing the drawing.
 */
 
 #import <Cocoa/Cocoa.h>

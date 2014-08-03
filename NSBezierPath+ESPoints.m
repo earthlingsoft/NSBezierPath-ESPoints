@@ -1,10 +1,9 @@
+// NSBezierPath+ESPoints.m
 //
-//  NSBezierPath+ESPoints.m
-//	v1 (2008-07-27)
-//
-//  Created by  Sven on 24.05.08.
-//  Copyright 2008 earthlingsoft. All rights reserved.
-//
+// Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
+// Some rights reserved: http://opensource.org/licenses/mit
+// Available at: https://github.com/earthlingsoft/NSBezierPath-ESPoints
+
 
 #import "NSBezierPath+ESPoints.h"
 
