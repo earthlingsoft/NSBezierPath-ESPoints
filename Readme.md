@@ -5,4 +5,5 @@ An Objective-C category on the NSBezierPath class. It provides the method `-draw
 
 The category is particularly useful when debugging Bézier Paths as it lets you see the underlying data with a single method call.
 
+## License
 MIT Licensed.

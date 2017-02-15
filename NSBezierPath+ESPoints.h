@@ -1,11 +1,11 @@
 /*
  NSBezierPath+ESPoints.h
  
- Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
- Some rights reserved: http://opensource.org/licenses/mit
+ Copyright 2008-2017 Sven-S. Porst, earthlingsoft: https://earthlingsoft.net/ssp/
+ Some rights reserved: https://opensource.org/licenses/mit
  Available at: https://github.com/earthlingsoft/NSBezierPath-ESPoints
  
- v1 (2008-07-27)
+ v2 (2017-02-15)
  
  ********************************************************************
  
