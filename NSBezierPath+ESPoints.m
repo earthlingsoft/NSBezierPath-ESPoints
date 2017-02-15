@@ -108,6 +108,10 @@
 			 */
 			previousPoint = points[0];
 			break;
+			
+		case NSClosePathBezierPathElement:
+			previousPoint = points[0];
+			break;
 	}
 	
 	return previousPoint;
