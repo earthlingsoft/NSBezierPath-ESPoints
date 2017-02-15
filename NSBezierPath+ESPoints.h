@@ -38,7 +38,7 @@
 - (void) drawHandlePoint:(NSPoint)pt;
 - (void) drawHandlePoint:(NSPoint)pt inColor:(NSColor *)pointColor;
 
-- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous;
-- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor;
+- (NSPoint) drawPathElement:(NSUInteger)n withPreviousPoint:(NSPoint)previous;
+- (NSPoint) drawPathElement:(NSUInteger)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor;
 
 @end

@@ -26,7 +26,7 @@
 - (void) drawPointsInColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor {
 	NSPoint previousPoint = NSMakePoint(0.0, 0.0);
 	
-	for (NSInteger i=0; i < [self elementCount]; i++) {
+	for (NSUInteger i=0; i < [self elementCount]; i++) {
 		previousPoint = [self drawPathElement:i withPreviousPoint:previousPoint inColor:pointColor withHandlesInColor:handleColor];
 	}
 }
@@ -62,16 +62,17 @@
 
 #pragma mark DRAWING PATH ELEMENTS
 
-- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous {
+- (NSPoint) drawPathElement:(NSUInteger)n withPreviousPoint:(NSPoint)previous {
 	return [self drawPathElement:n withPreviousPoint:previous inColor:DEFAULTPOINTCOLOR withHandlesInColor:DEFAULTHANDLECOLOR];
 }
 
 
-- (NSPoint) drawPathElement:(int)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor {
+- (NSPoint) drawPathElement:(NSUInteger)n withPreviousPoint:(NSPoint)previous inColor:(NSColor *)pointColor withHandlesInColor:(NSColor *)handleColor {
 	NSPoint previousPoint;
 	NSPoint points[3];
 	NSBezierPathElement element = [self elementAtIndex:n associatedPoints:points];
 	NSBezierPath * bp;
+	
 	switch (element) {
 		case NSCurveToBezierPathElement:
 			bp = [NSBezierPath bezierPath];
